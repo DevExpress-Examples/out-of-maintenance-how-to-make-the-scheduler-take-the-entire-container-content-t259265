@@ -31,6 +31,7 @@
 					var h1 = $(".dxsc-timeline-scalesContainer")[0].offsetHeight;
 					$(".dxsc-timeline-commonContainer")[0].style.height = (h - h1 - commonElementsHeight) + "px";
 					$(".dxsc-timeline-resourcesContainer")[0].style.height = (h - h1 - commonElementsHeight) + "px";
+					$(".dxsc-timeline-scrollLimiter")[0].style.height = "100%";
 				}
 			}
 			clientScheduler.adjustControlInternal();
