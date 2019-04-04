@@ -3,8 +3,8 @@
 
 * [CustomEvents.cs](./CS/T259265/CustomEvents.cs) (VB: [CustomEvents.vb](./VB/T259265/CustomEvents.vb))
 * [Global.asax](./CS/T259265/Global.asax) (VB: [Global.asax](./VB/T259265/Global.asax))
-* [Global.asax.cs](./CS/T259265/Global.asax.cs) (VB: [Global.asax](./VB/T259265/Global.asax))
-* [Scheduler.aspx](./CS/T259265/Scheduler.aspx) (VB: [Scheduler.aspx.vb](./VB/T259265/Scheduler.aspx.vb))
+* [Global.asax.cs](./CS/T259265/Global.asax.cs) (VB: [Global.asax.vb](./VB/T259265/Global.asax.vb))
+* [Scheduler.aspx](./CS/T259265/Scheduler.aspx) (VB: [Scheduler.aspx](./VB/T259265/Scheduler.aspx))
 * [Scheduler.aspx.cs](./CS/T259265/Scheduler.aspx.cs) (VB: [Scheduler.aspx.vb](./VB/T259265/Scheduler.aspx.vb))
 <!-- default file list end -->
 # How to make the scheduler take the entire container content
