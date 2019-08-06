@@ -1,8 +1,5 @@
 <!-- default file list -->
-*Files to look at*:
 
-* [Default.aspx](./CS/WebApplication1/Default.aspx) (VB: [Default.aspx](./VB/WebApplication1/Default.aspx))
-<!-- default file list end -->
 # How to make the scheduler take the entire container content
 
 <strong>Starting with v19.1</strong> you can use the <a href="https://docs.devexpress.com/AspNet/js-ASPxClientScheduler.SetHeight(height)">SetHeight</a> method to stretch ASPxScheduler dynamically on the client. Call this method in the <a href="https://docs.devexpress.com/AspNet/js-ASPxClientControlBase.Init">ASPxClientScheduler.Init</a> and <a href="https://docs.devexpress.com/AspNet/js-ASPxClientScheduler.EndCallback">ASPxClientScheduler.EndCallback</a>events and on resizing the browser window. You can handle the <a href="https://docs.devexpress.com/AspNet/js-ASPxClientGlobalEvents.BrowserWindowResized">ASPxClientGlobalEvents.BrowserWindowResized</a> event to catch the moment of browser resizing.
