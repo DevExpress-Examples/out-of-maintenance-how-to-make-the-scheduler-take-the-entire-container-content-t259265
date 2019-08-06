@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.ComponentModel
 Imports System.Linq
@@ -12,6 +11,7 @@ Imports DevExpress.XtraScheduler
 Namespace WebApplication1
 	Partial Public Class [Default]
 		Inherits System.Web.UI.Page
+
 		Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs)
 
 		End Sub
@@ -21,23 +21,6 @@ Namespace WebApplication1
 				Session("CustomResourceDataSource") = New CustomResourceDataSource(GetCustomResources())
 			End If
 			e.ObjectInstance = Session("CustomResourceDataSource")
-
-			Dim ruler As TimeRuler = ASPxScheduler1.DayView.TimeRulers(0)
-
-
-
-			'Appointment newAppt = ASPxScheduler1.Storage.CreateAppointment(DevExpress.XtraScheduler.AppointmentType.Normal);
-			'newAppt.Subject = "test";
-			'newAppt.Start = DateTime.Now;
-			'newAppt.End = DateTime.Now.AddDays(1);
-
-			'ASPxScheduler1.Storage.Appointments.Add(newAppt);
-
-
-			'Appointment existingAppt = ASPxScheduler1.Storage.Appointments.Items.FirstOrDefault(appt => appt.Subject == "test");
-			'if(existingAppt != null) {
-			'    existingAppt.Subject = "test (modified)";
-			'}
 		End Sub
 
 		Private Function GetCustomResources() As BindingList(Of CustomResource)
@@ -62,8 +45,8 @@ Namespace WebApplication1
 			apt.OwnerId = resourceId
 			Dim rnd As Random = RandomInstance
 			Dim rangeInMinutes As Integer = 60 * 24
-			apt.StartTime = DateTime.Today + TimeSpan.FromMinutes(rnd.Next(0, rangeInMinutes))
-			apt.EndTime = apt.StartTime + TimeSpan.FromMinutes(rnd.Next(0, rangeInMinutes \ 4))
+			apt.StartTime = Date.Today + TimeSpan.FromMinutes(rnd.Next(0, rangeInMinutes))
+			apt.EndTime = apt.StartTime.Add(TimeSpan.FromMinutes(rnd.Next(0, rangeInMinutes \ 4)))
 			apt.Status = status
 			apt.Label = label
 			Return apt
@@ -78,7 +61,6 @@ Namespace WebApplication1
 
 		Private Function GetCustomAppointments() As BindingList(Of CustomAppointment)
 			Dim appointments As New BindingList(Of CustomAppointment)()
-
 			Dim resources As CustomResourceDataSource = TryCast(Session("CustomResourceDataSource"), CustomResourceDataSource)
 			If resources IsNot Nothing Then
 				For Each item As CustomResource In resources.Resources
@@ -91,8 +73,5 @@ Namespace WebApplication1
 			Return appointments
 		End Function
 
-		Protected Sub ASPxScheduler1_CustomJSProperties(ByVal sender As Object, ByVal e As DevExpress.Web.CustomJSPropertiesEventArgs)
-			e.Properties.Add("cpWeekCount", (TryCast(sender, ASPxScheduler)).MonthView.WeekCount)
-		End Sub
 	End Class
 End Namespace

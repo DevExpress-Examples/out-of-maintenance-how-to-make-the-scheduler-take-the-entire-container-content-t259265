@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections
 Imports System.Collections.Generic
 Imports System.ComponentModel
@@ -85,6 +84,7 @@ Namespace WebApplication1
 	End Class
 
 	Public Class CustomResourceDataSource
+'INSTANT VB NOTE: The field resources was renamed since Visual Basic does not allow fields to have the same name as other class members:
 		Private resources_Renamed As BindingList(Of CustomResource)
 		Public Sub New(ByVal parResources As BindingList(Of CustomResource))
 			If parResources Is Nothing Then

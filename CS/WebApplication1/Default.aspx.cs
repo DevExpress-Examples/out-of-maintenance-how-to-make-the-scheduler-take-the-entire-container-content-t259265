@@ -18,24 +18,7 @@ namespace WebApplication1 {
             if(Session["CustomResourceDataSource"] == null) {
                 Session["CustomResourceDataSource"] = new CustomResourceDataSource(GetCustomResources());
             }
-            e.ObjectInstance = Session["CustomResourceDataSource"];
-
-            TimeRuler ruler = ASPxScheduler1.DayView.TimeRulers[0];
-
-            
-
-            //Appointment newAppt = ASPxScheduler1.Storage.CreateAppointment(DevExpress.XtraScheduler.AppointmentType.Normal);
-            //newAppt.Subject = "test";
-            //newAppt.Start = DateTime.Now;
-            //newAppt.End = DateTime.Now.AddDays(1);
-
-            //ASPxScheduler1.Storage.Appointments.Add(newAppt);
-
-
-            //Appointment existingAppt = ASPxScheduler1.Storage.Appointments.Items.FirstOrDefault(appt => appt.Subject == "test");
-            //if(existingAppt != null) {
-            //    existingAppt.Subject = "test (modified)";
-            //}
+            e.ObjectInstance = Session["CustomResourceDataSource"];            
         }
 
         BindingList<CustomResource> GetCustomResources() {
@@ -88,8 +71,5 @@ namespace WebApplication1 {
             return appointments;
         }
 
-        protected void ASPxScheduler1_CustomJSProperties(object sender, DevExpress.Web.CustomJSPropertiesEventArgs e) {
-            e.Properties.Add("cpWeekCount", (sender as ASPxScheduler).MonthView.WeekCount);        
-        }
     }
 }

@@ -1,5 +1,4 @@
-﻿Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Web
@@ -7,8 +6,8 @@ Imports System.Web
 Namespace WebApplication1
 	#Region "#customappointment"
 	Public Class CustomAppointment
-		Private m_Start As DateTime
-		Private m_End As DateTime
+		Private m_Start As Date
+		Private m_End As Date
 		Private m_Subject As String
 		Private m_Status As Integer
 		Private m_Description As String
@@ -22,19 +21,19 @@ Namespace WebApplication1
 		Private m_Id As Object
 
 
-		Public Property StartTime() As DateTime
+		Public Property StartTime() As Date
 			Get
 				Return m_Start
 			End Get
-			Set(ByVal value As DateTime)
+			Set(ByVal value As Date)
 				m_Start = value
 			End Set
 		End Property
-		Public Property EndTime() As DateTime
+		Public Property EndTime() As Date
 			Get
 				Return m_End
 			End Get
-			Set(ByVal value As DateTime)
+			Set(ByVal value As Date)
 				m_End = value
 			End Set
 		End Property

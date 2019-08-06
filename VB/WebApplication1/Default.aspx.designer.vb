@@ -7,9 +7,6 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
-
-Imports Microsoft.VisualBasic
-Imports System
 Namespace WebApplication1
 
 
@@ -25,22 +22,13 @@ Namespace WebApplication1
 		Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
 		''' <summary>
-		''' splMain control.
+		''' ASPxGlobalEvents1 control.
 		''' </summary>
 		''' <remarks>
 		''' Auto-generated field.
 		''' To modify move field declaration from designer file to code-behind file.
 		''' </remarks>
-		Protected splMain As Global.DevExpress.Web.ASPxSplitter
-
-		''' <summary>
-		''' SplitterContentControl1 control.
-		''' </summary>
-		''' <remarks>
-		''' Auto-generated field.
-		''' To modify move field declaration from designer file to code-behind file.
-		''' </remarks>
-		Protected SplitterContentControl1 As Global.DevExpress.Web.SplitterContentControl
+		Protected ASPxGlobalEvents1 As Global.DevExpress.Web.ASPxGlobalEvents
 
 		''' <summary>
 		''' ASPxScheduler1 control.
